@@ -24,7 +24,7 @@ def message(request):
             },
             'keyboard':{
                 'type':'buttons',
-                'buttions':['이름','나이','성별','학과']
+                'buttons':['이름','나이','성별','학과']
             }
         })
     elif choice=='나이':
@@ -34,7 +34,7 @@ def message(request):
             },
             'keyboard':{
                 'type':'buttons',
-                'buttions':['이름','나이','성별','학과']
+                'buttons':['이름','나이','성별','학과']
             }
         })
     elif choice=='성별':
@@ -44,7 +44,7 @@ def message(request):
             },
             'keyboard':{
                 'type':'buttons',
-                'buttions':['이름','나이','성별','학과']
+                'buttons':['이름','나이','성별','학과']
             }
         })
     else:
@@ -54,6 +54,6 @@ def message(request):
             },
             'keyboard':{
                 'type':'buttons',
-                'buttions':['이름','나이','성별','학과']
+                'buttons':['이름','나이','성별','학과']
             }
         })
