@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 import json
-
+from django.views.decorators.csrf import csrf_exempt
 
 def keyboard(request):
     return JsonResponse({
@@ -9,6 +9,7 @@ def keyboard(request):
         'buttons':['이름','나이','성별','학과']
     })
 
+@csrf_exempt
 def message(request):
     json_str = ((request.body)).decode('utf-8')
     received_json_data = json.loads(json_str)
