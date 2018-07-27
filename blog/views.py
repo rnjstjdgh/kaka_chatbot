@@ -36,7 +36,7 @@ def message(request):
             },
             'keyboard':{
                 'type':'buttons',
-                'buttons':['이름','나이','성별','학과']
+                'buttons':['이름','나이','성별','대학정보']
             }
         })
     elif choice=='대학정보':
@@ -56,7 +56,7 @@ def message(request):
          },
          'keyboard': {
             'type': 'buttons',
-            'buttons': ['이름', '나이', '성별', '학과']
+             'buttons': ['이름', '나이', '성별', '대학정보']
         }
     })
     elif choice == '학년':
@@ -66,7 +66,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons': ['이름', '나이', '성별', '학과']
+                'buttons':['이름','나이','성별','대학정보']
             }
         })
     elif choice == '성적':
@@ -76,7 +76,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons': ['이름', '나이', '성별', '학과']
+                'buttons':['이름','나이','성별','대학정보']
             }
         })
 
@@ -87,6 +87,6 @@ def message(request):
             },
             'keyboard':{
                 'type':'buttons',
-                'buttons':['이름','나이','성별','학과']
+                'buttons':['이름','나이','성별','대학정보']
             }
         })
