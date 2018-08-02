@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.http import JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
+import random
+
 
 def keyboard(request):
     return JsonResponse({
         'type':'buttons',
-        'buttons':['이름','나이','성별','대학정보']
+        'buttons':['가위','바위','보']
     })
 
 @csrf_exempt
@@ -18,11 +20,121 @@ def message(request):
     type=received_json_data['type']
     choice=received_json_data['content']
 
+    user=choice
+    computer=random.randrange(1,4)
+    if computer==1:
+        computer='가위'
+    elif computer==2:
+        computer='바위'
+    else:
+        computer='보'
+
+    if user=='가위':
+        if computer=='가위':
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->비겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+        elif computer=='바위':
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->컴퓨터가 이겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+        else:
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->사용자가 이겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+    elif user=='바위':
+        if computer=='가위':
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->사용자가 이겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+        elif computer=='바위':
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->비겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+        else:
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->컴퓨터가 이겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+    else :
+        if computer=='가위':
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->컴퓨터가 이겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+        elif computer=='바위':
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->사용자가 이겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+        else:
+            return JsonResponse({
+                'message': {
+                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->비겼습니다!'
+                },
+                'keyboard': {
+                    'type': 'buttons',
+                    'buttons': ['가위', '바위', '보']
+                }
+            })
+
+
+
+
 
     '''
-    키보드에서 넘어온 리퀘스트에 해당되는 choice->내 선택지-->여기서 컴퓨터 난수 발생시켜서 승패를 결정한 후 승리면 1/패면 0을 변수에 저장해서 최종적으로 제이슨을 리턴한다
+    일단은 가위,바위,보를 내가 선택하고 컴퓨터는 임이로 선택해서 누가이겼는지만 출력하게 만들자
     '''
 
+#random.randrange(1,4)->1(가위),2(바위),3(보)중 난수발생
+
+
+'''
     if choice=='이름':
         return JsonResponse({
             'message':{
@@ -95,3 +207,4 @@ def message(request):
                 'buttons':['이름','나이','성별','대학정보']
             }
         })
+'''
