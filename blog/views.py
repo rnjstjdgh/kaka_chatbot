@@ -3,10 +3,8 @@ from django.http import JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
 import random
-#daum실검 크롤링->그 데이터를 쿼리스트링으로 넘겨서 1위부터 10위까지 사이트로 순차접근->접근한 사이트에서 각각 정보 획득(까페 제목3개/ 블로그 개시글 제목 3개 등등...)
-from bs4 import BeautifulSoup
-import requests as rq
-from time import sleep
+
+
 
 
 
