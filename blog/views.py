@@ -18,10 +18,15 @@ def message(request):
     type=received_json_data['type']
     choice=received_json_data['content']
 
+
+    '''
+    키보드에서 넘어온 리퀘스트에 해당되는 choice->내 선택지-->여기서 컴퓨터 난수 발생시켜서 승패를 결정한 후 승리면 1/패면 0을 변수에 저장해서 최종적으로 제이슨을 리턴한다
+    '''
+
     if choice=='이름':
         return JsonResponse({
             'message':{
-                'text':"권성호"
+                'text':" 최홍만"
             },
             'keyboard':{
                 'type':'buttons',
