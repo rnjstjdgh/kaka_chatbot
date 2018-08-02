@@ -33,7 +33,7 @@ def message(request):
         if computer=='가위':
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->비겼습니다!'
+                    'text': "컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+ '--->비겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -43,7 +43,7 @@ def message(request):
         elif computer=='바위':
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->컴퓨터가 이겼습니다!'
+                    'text': "컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+'--->컴퓨터가 이겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -53,7 +53,7 @@ def message(request):
         else:
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->사용자가 이겼습니다!'
+                    'text': "컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+'--->사용자가 이겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -64,7 +64,7 @@ def message(request):
         if computer=='가위':
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->사용자가 이겼습니다!'
+                    'text': "컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+ '--->사용자가 이겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -74,7 +74,7 @@ def message(request):
         elif computer=='바위':
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->비겼습니다!'
+                    'text': "컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+ '--->비겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -84,7 +84,7 @@ def message(request):
         else:
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->컴퓨터가 이겼습니다!'
+                    'text':"컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+'--->컴퓨터가 이겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -95,7 +95,7 @@ def message(request):
         if computer=='가위':
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->컴퓨터가 이겼습니다!'
+                    'text': "컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+ '--->컴퓨터가 이겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -105,7 +105,7 @@ def message(request):
         elif computer=='바위':
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->사용자가 이겼습니다!'
+                    'text': "컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+ '--->사용자가 이겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
@@ -115,7 +115,7 @@ def message(request):
         else:
             return JsonResponse({
                 'message': {
-                    'text': "컴퓨터는 %s" % computer + '사용자는 %s' % user + '--->비겼습니다!'
+                    'text': "컴퓨터는 %s" % computer+"\n" + '사용자는 %s' % user +"\n"+ '--->비겼습니다!'
                 },
                 'keyboard': {
                     'type': 'buttons',
