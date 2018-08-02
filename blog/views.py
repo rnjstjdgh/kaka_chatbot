@@ -3,12 +3,40 @@ from django.http import JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
 import random
+#daum실검 크롤링->그 데이터를 쿼리스트링으로 넘겨서 1위부터 10위까지 사이트로 순차접근->접근한 사이트에서 각각 정보 획득(까페 제목3개/ 블로그 개시글 제목 3개 등등...)
+from bs4 import BeautifulSoup
+import requests as rq
+from time import sleep
+
+#daum실검 크롤링->그 데이터를 쿼리스트링으로 넘겨서 1위부터 10위까지 사이트로 순차접근->접근한 사이트에서 각각 정보 획득(까페 제목3개/ 블로그 개시글 제목 3개 등등...)
+from bs4 import BeautifulSoup
+import requests as rq
+from time import sleep
+
+#dau실검 1~10까지 dict로 반환해주는 함수 구현
+def crol_RealTimeContents():
+    url_main_p = 'https://www.daum.net/'  # daum main page url
+    res_main_p = rq.get(url_main_p)
+    soup_main = BeautifulSoup(res_main_p.text, 'html.parser')
+    # print(soup_main)
+    dic = {}  # 순위와 내용을 메핑시킬 dict선언 {'rank':'content'}
+    result = soup_main.find('div', {'class': 'hotissue_mini'})  # 실검 관련 테크로 접근
+    # print(result)
+    contents = result.find_all('a', {'class': 'link_issue'})
+    for i in range(1, 11):
+        dic[i] = contents[i - 1].text
+    return dic
+
+list=[]
+for i in crol_RealTimeContents().values():
+    list.append(i)
+
 
 
 def keyboard(request):
     return JsonResponse({
         'type':'buttons',
-        'buttons':['가위','바위','보']
+        'buttons':['가위', '바위', '보']
     })
 
 @csrf_exempt
@@ -134,77 +162,5 @@ def message(request):
 #random.randrange(1,4)->1(가위),2(바위),3(보)중 난수발생
 
 
-'''
-    if choice=='이름':
-        return JsonResponse({
-            'message':{
-                'text':" 최홍만"
-            },
-            'keyboard':{
-                'type':'buttons',
-                'buttons':['이름','나이','성별','대학정보']
-            }
-        })
 
-    elif choice=='나이':
-        return JsonResponse({
-            'message':{
-                'text':"24살"
-            },
-            'keyboard':{
-                'type':'buttons',
-                'buttons':['이름','나이','성별','대학정보']
-            }
-        })
-    elif choice=='대학정보':
-        return JsonResponse({
-            'message':{
-                'text':"대학정보를 불러옵니다"
-            },
-            'keyboard':{
-                'type':'buttons',
-                'buttons':['학과','학년','성적']
-            }
-        })
-    elif choice == '학과':
-     return JsonResponse({
-         'message': {
-             'text': "수학과"
-         },
-         'keyboard': {
-            'type': 'buttons',
-             'buttons': ['이름', '나이', '성별', '대학정보']
-        }
-    })
-    elif choice == '학년':
-        return JsonResponse({
-            'message': {
-                'text': "3학년"
-            },
-            'keyboard': {
-                'type': 'buttons',
-                'buttons':['이름','나이','성별','대학정보']
-            }
-        })
-    elif choice == '성적':
-        return JsonResponse({
-            'message': {
-                'text': "4.0"
-            },
-            'keyboard': {
-                'type': 'buttons',
-                'buttons':['이름','나이','성별','대학정보']
-            }
-        })
 
-    else:
-        return JsonResponse({
-            'message':{
-                'text':"남자"
-            },
-            'keyboard':{
-                'type':'buttons',
-                'buttons':['이름','나이','성별','대학정보']
-            }
-        })
-'''
