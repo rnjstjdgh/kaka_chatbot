@@ -57,7 +57,7 @@ dic = crol_RealTimeContents()
 def keyboard(request):
     return JsonResponse({
         'type':'buttons',
-        'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+        'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
     })
 
 @csrf_exempt
@@ -73,111 +73,110 @@ def message(request):
         t=main_crolling(dic[0])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     elif choice==SR[1]:
         t = main_crolling(dic[1])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     elif choice==SR[2]:
         t = main_crolling(dic[2])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons': ['1->' + SR[0], '2->' + SR[1], '3->' + SR[2], '4->' + SR[3], '5->' + SR[4], '6->' + SR[5],
-                            '7->' + SR[6], '8->' + SR[7], '9->' + SR[8], '10->' + SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     elif choice==SR[3]:
         t = main_crolling(dic[3])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text': 'blog title-->' + '\n1.' + t[0][0] + '\n2.' + t[0][1] + '\n3.' + t[0][2] + '\n4.' + t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     elif choice==SR[4]:
         t = main_crolling(dic[4])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     elif choice==SR[5]:
         t = main_crolling(dic[5])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     elif choice==SR[6]:
         t = main_crolling(dic[6])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     elif choice==SR[7]:
         t = main_crolling(dic[7])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     elif choice==SR[8]:
         t = main_crolling(dic[8])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
     else:
         t = main_crolling(dic[9])
         return JsonResponse({
             'message': {
-                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
+                'text':'blog title-->'+'\n1.'+t[0][0]+'\n2.'+t[0][1]+'\n3.'+t[0][2]+'\n4.'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
             }
         })
 
