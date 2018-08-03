@@ -20,9 +20,9 @@ def crol_RealTimeContents():
         dic[i] = contents[i - 1].text
     return dic
 
-list=[]
+SR=[]
 for i in crol_RealTimeContents().values():
-    list.append(i)
+    SR.append(i)
 
 
 
@@ -30,9 +30,124 @@ for i in crol_RealTimeContents().values():
 def keyboard(request):
     return JsonResponse({
         'type':'buttons',
-        'buttons':['가위', '바위', '보']
+        'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
     })
 
+@csrf_exempt
+def message(request):
+    json_str = ((request.body)).decode('utf-8')
+    received_json_data = json.loads(json_str)
+
+    user=received_json_data['user_key']
+    type=received_json_data['type']
+    choice=received_json_data['content']
+
+    if choice==SR[0]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    elif choice==SR[1]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    elif choice==SR[2]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    elif choice==SR[3]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    elif choice==SR[4]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    elif choice==SR[5]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    elif choice==SR[6]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    elif choice==SR[7]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    elif choice==SR[8]:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+    else:
+        return JsonResponse({
+            'message': {
+                'text': "NEXT"
+            },
+            'keyboard': {
+                'type': 'buttons',
+                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+            }
+        })
+
+
+
+
+
+'''
 @csrf_exempt
 def message(request):
     json_str = ((request.body)).decode('utf-8')
@@ -145,14 +260,7 @@ def message(request):
                 }
             })
 
-
-
-
-
-    '''
-    일단은 가위,바위,보를 내가 선택하고 컴퓨터는 임이로 선택해서 누가이겼는지만 출력하게 만들자
-    '''
-
+'''
 #random.randrange(1,4)->1(가위),2(바위),3(보)중 난수발생
 
 
