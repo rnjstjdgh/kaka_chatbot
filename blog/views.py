@@ -73,7 +73,7 @@ def message(request):
         t=main_crolling(dic[0])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -84,7 +84,7 @@ def message(request):
         t = main_crolling(dic[1])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -95,7 +95,7 @@ def message(request):
         t = main_crolling(dic[2])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -107,7 +107,7 @@ def message(request):
         t = main_crolling(dic[3])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -118,7 +118,7 @@ def message(request):
         t = main_crolling(dic[4])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -129,7 +129,7 @@ def message(request):
         t = main_crolling(dic[5])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -140,7 +140,7 @@ def message(request):
         t = main_crolling(dic[6])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -151,7 +151,7 @@ def message(request):
         t = main_crolling(dic[7])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -162,7 +162,7 @@ def message(request):
         t = main_crolling(dic[8])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
@@ -173,7 +173,7 @@ def message(request):
         t = main_crolling(dic[9])
         return JsonResponse({
             'message': {
-                'text': "NEXT"
+                'text':'blog title-->'+'\n'+t[0][0]+'\n'+t[0][1]+'\n'+t[0][2]+'\n'+t[0][3]
             },
             'keyboard': {
                 'type': 'buttons',
