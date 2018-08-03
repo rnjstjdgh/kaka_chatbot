@@ -3,7 +3,9 @@ from django.http import JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
 import random
-
+from bs4 import BeautifulSoup
+import requests as rq
+from time import sleep
 
 
 
