@@ -52,6 +52,7 @@ def main_crolling(realTimeContents):
         relevant_content_list.append(i.text)
     return blog_title_list,news_title_list,relevant_content_list
 
+dic = crol_RealTimeContents()
 
 def keyboard(request):
     return JsonResponse({
@@ -69,6 +70,7 @@ def message(request):
     choice=received_json_data['content']
 
     if choice==SR[0]:
+        t=main_crolling(dic[0])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -79,6 +81,7 @@ def message(request):
             }
         })
     elif choice==SR[1]:
+        t = main_crolling(dic[1])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -89,6 +92,7 @@ def message(request):
             }
         })
     elif choice==SR[2]:
+        t = main_crolling(dic[2])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -100,6 +104,7 @@ def message(request):
             }
         })
     elif choice==SR[3]:
+        t = main_crolling(dic[3])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -110,6 +115,7 @@ def message(request):
             }
         })
     elif choice==SR[4]:
+        t = main_crolling(dic[4])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -120,6 +126,7 @@ def message(request):
             }
         })
     elif choice==SR[5]:
+        t = main_crolling(dic[5])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -130,6 +137,7 @@ def message(request):
             }
         })
     elif choice==SR[6]:
+        t = main_crolling(dic[6])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -140,6 +148,7 @@ def message(request):
             }
         })
     elif choice==SR[7]:
+        t = main_crolling(dic[7])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -150,6 +159,7 @@ def message(request):
             }
         })
     elif choice==SR[8]:
+        t = main_crolling(dic[8])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
@@ -160,6 +170,7 @@ def message(request):
             }
         })
     else:
+        t = main_crolling(dic[9])
         return JsonResponse({
             'message': {
                 'text': "NEXT"
