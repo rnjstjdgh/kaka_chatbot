@@ -30,7 +30,7 @@ for i in crol_RealTimeContents().values():
 def keyboard(request):
     return JsonResponse({
         'type':'buttons',
-        'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+        'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
     })
 
 @csrf_exempt
@@ -49,7 +49,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
     elif choice==SR[1]:
@@ -59,7 +59,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
     elif choice==SR[2]:
@@ -69,7 +69,8 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons': ['1->' + SR[0], '2->' + SR[1], '3->' + SR[2], '4->' + SR[3], '5->' + SR[4], '6->' + SR[5],
+                            '7->' + SR[6], '8->' + SR[7], '9->' + SR[8], '10->' + SR[9]]
             }
         })
     elif choice==SR[3]:
@@ -79,7 +80,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
     elif choice==SR[4]:
@@ -89,7 +90,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
     elif choice==SR[5]:
@@ -99,7 +100,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
     elif choice==SR[6]:
@@ -109,7 +110,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
     elif choice==SR[7]:
@@ -119,7 +120,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
     elif choice==SR[8]:
@@ -129,7 +130,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
     else:
@@ -139,7 +140,7 @@ def message(request):
             },
             'keyboard': {
                 'type': 'buttons',
-                'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
+                'buttons':['1->'+SR[0],'2->'+SR[1] ,'3->'+SR[2],'4->'+SR[3],'5->'+SR[4],'6->'+SR[5],'7->'+SR[6],'8->'+SR[7],'9->'+SR[8],'10->'+SR[9]]
             }
         })
 
