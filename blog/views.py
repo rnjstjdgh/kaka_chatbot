@@ -24,7 +24,33 @@ SR=[]
 for i in crol_RealTimeContents().values():
     SR.append(i)
 
-
+#실검 리스트를 인자로 받아서 각 실검별 블로그, 뉴스, 연관검색어 title을 반환해주는 함수 구현
+def main_crolling(realTimeContents):
+    #print('=' * 100 + realTimeContents + '=' * 100)
+    # url에 q부분에 실검 내용을 포함시키면 그 주소로 이동함!
+    url_search = 'https://search.daum.net/search?w=tot&DA=ATG'
+    res1 = rq.get(url_search, params={'q': realTimeContents})
+    soup_search = BeautifulSoup(res1.text, 'html.parser')
+    # print(soup_search.prettify())  # prettify-> html code를 좀더 보기 쉽게 만들기
+    # 블로그 개시글 재목 4개 가져오기
+    route_bolg_title = soup_search.find('div', {'id': 'blogColl'})
+    bolg_title = route_bolg_title.find_all('a', {'class': 'f_link_b'})
+    blog_title_list = []
+    for i in bolg_title:
+        blog_title_list.append(i.text)
+    # 뉴스 개시글 재목 가져오기
+    route_news_title = soup_search.find('div', {'id': 'newsColl'})
+    news_title = route_news_title.find_all('a', {'class': 'f_link_b'})
+    news_title_list = []
+    for i in news_title:
+        news_title_list.append(i.text)
+    # 관련 검색어 가져오기
+    route_relevant_content = soup_search.find('div', {'id': 'netizenColl_right'})
+    relevant_content = route_relevant_content.find_all('span', {'class': 'txt_keyword'})
+    relevant_content_list = []
+    for i in relevant_content:
+        relevant_content_list.append(i.text)
+    return blog_title_list,news_title_list,relevant_content_list
 
 
 def keyboard(request):
