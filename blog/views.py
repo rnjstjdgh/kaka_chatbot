@@ -19,10 +19,11 @@ def crol_RealTimeContents():
     for i in range(1, 11):
         dic[i] = contents[i - 1].text
     return dic
-
+'''
 SR=[]
 for i in crol_RealTimeContents().values():
     SR.append(i)
+'''
 
 #실검 리스트를 인자로 받아서 각 실검별 블로그, 뉴스, 연관검색어 title을 반환해주는 함수 구현
 def main_crolling(realTimeContents):
@@ -51,10 +52,13 @@ def main_crolling(realTimeContents):
     for i in relevant_content:
         relevant_content_list.append(i.text)
     return blog_title_list,news_title_list,relevant_content_list
-
+'''
 dic = crol_RealTimeContents()
-
+'''
 def keyboard(request):
+    SR = []
+    for i in crol_RealTimeContents().values():
+        SR.append(i)
     return JsonResponse({
         'type':'buttons',
         'buttons':[SR[0],SR[1] ,SR[2],SR[3],SR[4],SR[5],SR[6],SR[7],SR[8],SR[9]]
@@ -70,6 +74,10 @@ def message(request):
     choice=received_json_data['content']
 
     if choice==SR[0]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t=main_crolling(dic[1])
         return JsonResponse({
             'message': {
@@ -81,6 +89,10 @@ def message(request):
             }
         })
     elif choice==SR[1]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[2])
         return JsonResponse({
             'message': {
@@ -92,6 +104,10 @@ def message(request):
             }
         })
     elif choice==SR[2]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[3])
         return JsonResponse({
             'message': {
@@ -103,6 +119,10 @@ def message(request):
             }
         })
     elif choice==SR[3]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[4])
         return JsonResponse({
             'message': {
@@ -114,6 +134,10 @@ def message(request):
             }
         })
     elif choice==SR[4]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[5])
         return JsonResponse({
             'message': {
@@ -125,6 +149,10 @@ def message(request):
             }
         })
     elif choice==SR[5]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[6])
         return JsonResponse({
             'message': {
@@ -136,6 +164,10 @@ def message(request):
             }
         })
     elif choice==SR[6]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[7])
         return JsonResponse({
             'message': {
@@ -147,6 +179,10 @@ def message(request):
             }
         })
     elif choice==SR[7]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[8])
         return JsonResponse({
             'message': {
@@ -158,6 +194,10 @@ def message(request):
             }
         })
     elif choice==SR[8]:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[9])
         return JsonResponse({
             'message': {
@@ -169,6 +209,10 @@ def message(request):
             }
         })
     else:
+        SR = []
+        for i in crol_RealTimeContents().values():
+            SR.append(i)
+        dic = crol_RealTimeContents()
         t = main_crolling(dic[10])
         return JsonResponse({
             'message': {
